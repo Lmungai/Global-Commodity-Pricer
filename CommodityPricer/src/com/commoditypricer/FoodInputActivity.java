@@ -21,6 +21,18 @@ public class FoodInputActivity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_foodinput);
+		
+		//retreve the commodity units from Intent
+		
+		//parse the string into JSON Array
+		
+		//Get access to the Spinner Object
+		
+		//loop through the JSON Array and create entries in the Spinner"s Adapter
+		
+		//Set the Spinners Adapter
+		
+	
 	}
 
 	public void onSubmitButtonClicked(View view) {
