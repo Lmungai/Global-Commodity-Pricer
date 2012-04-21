@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_margin="5dip"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <Button
+        android:id="@+id/btnFoodItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:onClick="onCreateFoodItemClicked"
+        android:layout_marginBottom="10dip"
+        android:layout_centerHorizontal="true"
+        android:text="New Food Item" />
+
+    <Button
+        android:id="@+id/btnViewPrices"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnFoodItem"
+        android:onClick="onViewFoodPricesButtonClicked"
+        android:layout_centerHorizontal="true"
+        android:text="View Food Prices" />
+
+</RelativeLayout>
