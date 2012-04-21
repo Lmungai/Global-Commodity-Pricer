@@ -3,5 +3,6 @@
 
     <string name="hello">Hello World, HomeActivity!</string>
     <string name="app_name">CommodityPricer</string>
+    <string name="ok_button_title">Ok</string>
 
 </resources>

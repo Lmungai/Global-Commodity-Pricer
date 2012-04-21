@@ -5,19 +5,17 @@
     android:layout_height="match_parent" >
 
     <TextView
-        android:id="@+id/lblFoodCategories"
+        android:id="@+id/lblCommodityUnit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:text="Food Category" />
+        android:text="Unit" />
 
     <Spinner
         android:id="@+id/spFoodCategories"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/lblFoodCategories"
+        android:layout_below="@+id/lblCommodityUnit"
         android:layout_marginBottom="10dip" />
 
     <TextView
