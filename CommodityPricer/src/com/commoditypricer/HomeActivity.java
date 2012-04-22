@@ -7,11 +7,13 @@ import android.util.Log;
 import android.view.View;
 
 public class HomeActivity extends Activity {
+    String mResponse = null;
+    
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-        String commoditiesResponse;
+
         
         RestClient client = new RestClient(getString(R.string.commodityunits_url));
         client.addHeader("AcceptHeaders", "application/json");
@@ -20,17 +22,22 @@ public class HomeActivity extends Activity {
 			client.execute(RequestMethod.GET);
 			
 			//retrieve commodity units in JSON format
-			commoditiesResponse = client.getResponse();
-			
+			mResponse = client.getResponse();
+						
 			//pass the response as an Intent parameter to  FoodInputActivity
-			Log.d("Commodities Response", commoditiesResponse);
+			Log.d("Commodities Response", mResponse);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
     }
     
     public void onCreateFoodItemClicked(View view){
-    	startActivity(new Intent(HomeActivity.this, FoodInputActivity.class));
+    	
+		if (mResponse != null) {
+			Intent commodityIntent = new Intent(HomeActivity.this, FoodInputActivity.class);
+			commodityIntent.putExtra("UnitMeasures", mResponse);
+	    	startActivity(commodityIntent);			
+		}		
     }
     
     public void onViewFoodPricesButtonClicked(View view){
